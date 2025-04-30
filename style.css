@@ -290,3 +290,31 @@ footer a:hover {
   transition: transform 0.4s, box-shadow 0.4s;
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
+
+/* Garante que, ao rolar para uma âncora, ela seja posicionada abaixo do header fixo */
+section {
+  scroll-margin-top: 6rem; /* Ajuste esse valor caso seu header seja maior ou menor */
+}
+
+/* Espaço extra no topo do container, evitando que o conteúdo fique atrás do cabeçalho */
+.container {
+  margin-top: 8rem; /* Em desktop: 8rem equivale a 128px (ajuste conforme seu header) */
+}
+
+/* Para dispositivos móveis, reduzimos o espaçamento para se adequar melhor */
+@media (max-width: 768px) {
+  /* Altura aproximada do header em mobile */
+  section {
+    scroll-margin-top: 5rem; /* Aproximadamente 80px */
+  }
+
+  .container {
+    margin-top: 7rem; /* Aproximadamente 112px */
+  }
+
+  /* Ajustes de padding internos, se necessário */
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

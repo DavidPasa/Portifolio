@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio - David Pasa</title>
+  <!-- Google Fonts: Inclui as fontes Poppins e Roboto para o design -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome: Para ícones, como os ícones de redes sociais -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <!-- Arquivo CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- Header: Cabeçalho da página com o título e menu de navegação -->
+  <header>
+    <h1>David Pasa • Designer Gráfico</h1>
+    <nav>
+      <ul>
+        <!-- Links para as seções do portfólio -->
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Seção "Sobre": Apresentação profissional -->
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <div class="texto">
+        <p>Sou <strong>David Pasa</strong>, um designer gráfico com uma abordagem estratégica e criativa para a construção de marcas e identidades visuais. Com anos de experiência, busco sempre alavancar o potencial visual das empresas, criando soluções impactantes que comunicam claramente os valores e a visão de cada marca.</p>
+        <p>Especializado no uso de ferramentas como o <strong>Canva</strong>, meu foco é desenvolver designs intuitivos, modernos e funcionais, sempre alinhados às últimas tendências do mercado. Trabalho em estreita colaboração com meus clientes para entender suas necessidades e traduzir essas ideias em projetos gráficos inovadores e de alto impacto.</p>
+        <p>Com um olhar atento aos detalhes e comprometido com a qualidade, entrego soluções visuais que não só atraem, mas também retêm a atenção do público-alvo. O objetivo é sempre criar uma identidade visual única que se destaque no mercado competitivo de hoje.</p>
+        <p><strong>Formação Acadêmica:</strong> Técnico em Informática (Ensino Médio), com cursos complementares nas áreas de Design Gráfico e Desenvolvimento de Identidade Visual.</p>
+        <p>Se você está buscando transformar sua marca e criar uma identidade visual única, estou à disposição para levar sua ideia ao próximo nível.</p>
+      </div>
+    </section>
+
+    <!-- Seção "Trabalhos": Exibe os projetos realizados -->
+    <section id="trabalhos">
+      <h2>Trabalhos Recentes</h2>
+      <div class="trabalhos-grid">
+        <!-- Cada item dentro do grid é um link para uma imagem em lightbox -->
+        <a href="imagens/SOS_2.png" class="lightbox-trigger">
+          <img class="imagem-trabalho" src="imagens/SOS_2.png" alt="SOS Serviços Houses">
+        </a>
+        <a href="imagens/David_Pasa.png" class="lightbox-trigger">
+          <img class="imagem-trabalho" src="imagens/David_Pasa.png" alt="David Pasa">
+        </a>
+        <a href="imagens/Logo_teste_5.png" class="lightbox-trigger">
+          <img class="imagem-trabalho" src="imagens/Logo_teste_5.png" alt="Logo Culinária">
+        </a>
+        <a href="imagens/Logo_11.png" class="lightbox-trigger">
+          <img class="imagem-trabalho" src="imagens/Logo_11.png" alt="Logo Estilizado">
+        </a>
+        <a href="imagens/Logo_neon.png" class="lightbox-trigger">
+          <img class="imagem-trabalho" src="imagens/Logo_neon.png" alt="Logo Neon">
+        </a>
+      </div>
+    </section>
+
+    <!-- Seção "Chamada para Ação": Convida o visitante a enviar uma mensagem -->
+    <section class="cta">
+      <p>Pronto para elevar sua identidade visual?</p>
+      <a href="mailto:davidpasa06@gmail.com?subject=Contato%20do%20Portfólio" class="button">Enviar Mensagem</a>
+    </section>
+
+    <!-- Seção "Contato": Exibe seu nome como link para redirecionar ao e-mail e LinkedIn -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="texto">
+        <p>
+          <!-- Ícone e link do Gmail -->
+          <a href="mailto:davidpasa06@gmail.com" class="contato-link">
+            <i class="fas fa-envelope"></i> David Pasa - E-mail
+          </a>
+        </p>
+        <p>
+          <!-- Ícone e link do LinkedIn -->
+          <a href="https://www.linkedin.com/in/david-pasa-brunetto-89873b299/" target="_blank" rel="noopener" class="contato-link">
+            <i class="fab fa-linkedin"></i> David Pasa - LinkedIn
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Lightbox Modal: Exibe a imagem em tamanho maior quando clicada -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <span id="lightbox-close" class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" src=""/>
+  </div>
+
+  <!-- Script para abrir e fechar o lightbox -->
+  <script>
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    // Adiciona evento de clique para abrir o lightbox
+    document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+      trigger.addEventListener('click', e => {
+        e.preventDefault();
+        modal.style.display = 'flex'; // Exibe o modal
+        modalImg.src = trigger.href; // Define a imagem que será exibida no modal
+      });
+    });
+
+    // Função para fechar o lightbox
+    closeBtn.onclick = () => modal.style.display = 'none';
+    modal.onclick = e => {
+      if (e.target === modal) modal.style.display = 'none';
+    };
+  </script>
+
+  <!-- Rodapé: Contém os direitos autorais e link para voltar ao topo -->
+  <footer>
+    <p>© 2025 David Pasa. Todos os direitos reservados.</p>
+    <a href="#top" class="to-top">Voltar ao topo <i class="fas fa-chevron-up"></i></a>
+  </footer>
+
+</body>
+</html>

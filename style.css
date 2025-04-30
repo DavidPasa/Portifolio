@@ -1,12 +1,9 @@
 :root {
-  --fundo: #f4f4f4;
-  --primaria: #1a1a1a;
-  --secundaria: #2b2b2b;
-  --destaque: #8c7ae6;
-  --cinza-suave: #b2bec3;
-  --gradiente: linear-gradient(135deg, #8c7ae6 0%, #6c5ce7 100%);
-  --fundo-cta: #2d3436;
-  --hover-claro: #dfe6e9;
+  --fundo: #f5f5f5;
+  --primaria: #1c1c1e;
+  --secundaria: #333333;
+  --destaque: #080808;
+  --gradiente: linear-gradient(135deg, #2c2f31 0%, #2e2f30 100%);
   --fonte-titulos: 'Poppins', sans-serif;
   --fonte-corpo: 'Roboto', sans-serif;
 }
@@ -82,7 +79,7 @@ nav a:hover::after {
 }
 
 section {
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 0.5rem;
   padding: 3rem 2rem;
   margin-bottom: 2.5rem;
@@ -106,11 +103,6 @@ h2 {
   color: var(--secundaria);
 }
 
-/* Área de destaques (como Sobre e Trabalhos) com fundo diferenciado */
-.fundo-destaque {
-  background-color: #ffffff;
-}
-
 .trabalhos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -120,8 +112,7 @@ h2 {
 
 .imagem-trabalho {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: auto;
   border-radius: 0.5rem;
   overflow: hidden;
   transition: transform 0.4s, box-shadow 0.4s;
@@ -133,11 +124,11 @@ h2 {
   box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
 
-/* Chamada para Ação */
+/* Chamada de Ação */
 .cta {
   text-align: center;
   padding: 2.5rem 2rem;
-  background-color: var(--fundo-cta);
+  background: var(--destaque); /* Substituindo para a cor de destaque da paleta */
   border-radius: 0.5rem;
   color: white;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -147,18 +138,20 @@ h2 {
   display: inline-block;
   padding: 0.9rem 2.2rem;
   background-color: white;
-  color: var(--destaque);
+  color: var(--destaque); /* Cor do texto do botão */
   border-radius: 2rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.76);
 }
 
 .cta a.button:hover {
-  background-color: var(--hover-claro);
-  box-shadow: 0 6px 14px rgba(140, 122, 230, 0.3);
+  background-color: #e6f0ff;
+  box-shadow: 0 6px 14px rgba(3, 3, 3, 0.863);
+  color: var(--primaria); /* Alterando a cor do texto ao passar o mouse */
 }
+
 
 /* Rodapé */
 footer {
@@ -222,7 +215,7 @@ footer a:hover {
 /* Estilo dos links de contato */
 .contato-link {
   font-size: 18px;
-  color: var(--secundaria);
+  color: #333;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -247,12 +240,13 @@ footer a:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   nav ul {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
   }
 
   .container {
@@ -272,8 +266,20 @@ footer a:hover {
   .trabalhos-grid {
     grid-template-columns: 1fr;
   }
-}
 
+  .imagem-trabalho {
+    height: 200px; /* Ajustar a altura para dispositivos menores */
+  }
+
+  .cta {
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
 
 .imagem-trabalho {
   width: 100%;

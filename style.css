@@ -28,7 +28,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 header h1 {
@@ -65,7 +65,7 @@ nav a::after {
 }
 
 nav a:hover {
-  color: #f0f0f0;
+  color: #e0e0e0;
 }
 
 nav a:hover::after {
@@ -83,7 +83,7 @@ section {
   border-radius: 0.5rem;
   padding: 3rem 2rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -112,47 +112,48 @@ h2 {
 
 .imagem-trabalho {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: auto;
   border-radius: 0.5rem;
   overflow: hidden;
   transition: transform 0.4s, box-shadow 0.4s;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
 .imagem-trabalho:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
 
+/* Chamada de Ação */
 .cta {
   text-align: center;
   padding: 2.5rem 2rem;
-  background: var(--gradiente);
+  background: var(--destaque); /* Substituindo para a cor de destaque da paleta */
   border-radius: 0.5rem;
   color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .cta a.button {
   display: inline-block;
   padding: 0.9rem 2.2rem;
   background-color: white;
-  color: var(--primaria);
-  border: 2px solid var(--destaque);
+  color: var(--destaque); /* Cor do texto do botão */
   border-radius: 2rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.76);
 }
 
 .cta a.button:hover {
-  background-color: var(--destaque);
-  color: white;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  background-color: #e6f0ff;
+  box-shadow: 0 6px 14px rgba(3, 3, 3, 0.863);
+  color: var(--primaria); /* Alterando a cor do texto ao passar o mouse */
 }
 
+
+/* Rodapé */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -181,6 +182,7 @@ footer a:hover {
   margin-left: 0.3rem;
 }
 
+/* Lightbox Modal */
 .lightbox-modal {
   position: fixed;
   top: 0;
@@ -198,7 +200,7 @@ footer a:hover {
   max-width: 90%;
   max-height: 90%;
   border-radius: 0.5rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
 .lightbox-close {
@@ -210,9 +212,10 @@ footer a:hover {
   cursor: pointer;
 }
 
+/* Estilo dos links de contato */
 .contato-link {
   font-size: 18px;
-  color: var(--secundaria);
+  color: #333;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -227,13 +230,14 @@ footer a:hover {
 
 .contato-link i {
   font-size: 20px;
-  color: var(--primaria);
+  color: var(--destaque);
 }
 
 .contato-link:hover i {
-  color: #e78d68;
+  color: #ff5722;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.5rem;
@@ -264,7 +268,7 @@ footer a:hover {
   }
 
   .imagem-trabalho {
-    height: 200px;
+    height: 200px; /* Ajustar a altura para dispositivos menores */
   }
 
   .cta {

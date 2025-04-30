@@ -1,11 +1,11 @@
 :root {
   --fundo: #f5f5f5;
-  --primaria: #1c1c1e;
+  --primaria: #1C1C1C;
   --secundaria: #333333;
-  --destaque: #080808;
+  --destaque: #1C1C1C;
   --gradiente: linear-gradient(135deg, #2c2f31 0%, #2e2f30 100%);
   --fonte-titulos: 'Poppins', sans-serif;
-  --fonte-corpo: 'Roboto', sans-serif;
+  --fonte-corpo: 'Roboto', sans-serif;
 }
 
 * {
@@ -28,7 +28,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 header h1 {
@@ -65,7 +65,7 @@ nav a::after {
 }
 
 nav a:hover {
-  color: #e0e0e0;
+  color: #f0f0f0;
 }
 
 nav a:hover::after {
@@ -83,7 +83,7 @@ section {
   border-radius: 0.5rem;
   padding: 3rem 2rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
@@ -112,48 +112,47 @@ h2 {
 
 .imagem-trabalho {
   width: 100%;
-  height: auto;
+  height: 220px;
+  object-fit: cover;
   border-radius: 0.5rem;
   overflow: hidden;
   transition: transform 0.4s, box-shadow 0.4s;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 .imagem-trabalho:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
 }
 
-/* Chamada de Ação */
 .cta {
   text-align: center;
   padding: 2.5rem 2rem;
-  background: var(--destaque); /* Substituindo para a cor de destaque da paleta */
+  background: var(--gradiente);
   border-radius: 0.5rem;
   color: white;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cta a.button {
   display: inline-block;
   padding: 0.9rem 2.2rem;
   background-color: white;
-  color: var(--destaque); /* Cor do texto do botão */
+  color: var(--primaria);
+  border: 2px solid var(--destaque);
   border-radius: 2rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.76);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .cta a.button:hover {
-  background-color: #e6f0ff;
-  box-shadow: 0 6px 14px rgba(3, 3, 3, 0.863);
-  color: var(--primaria); /* Alterando a cor do texto ao passar o mouse */
+  background-color: var(--destaque);
+  color: white;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-
-/* Rodapé */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -182,7 +181,6 @@ footer a:hover {
   margin-left: 0.3rem;
 }
 
-/* Lightbox Modal */
 .lightbox-modal {
   position: fixed;
   top: 0;
@@ -200,7 +198,7 @@ footer a:hover {
   max-width: 90%;
   max-height: 90%;
   border-radius: 0.5rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
 .lightbox-close {
@@ -212,10 +210,9 @@ footer a:hover {
   cursor: pointer;
 }
 
-/* Estilo dos links de contato */
 .contato-link {
   font-size: 18px;
-  color: #333;
+  color: var(--secundaria);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -230,14 +227,13 @@ footer a:hover {
 
 .contato-link i {
   font-size: 20px;
-  color: var(--destaque);
+  color: var(--primaria);
 }
 
 .contato-link:hover i {
-  color: #ff5722;
+  color: #e78d68;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.5rem;
@@ -268,7 +264,7 @@ footer a:hover {
   }
 
   .imagem-trabalho {
-    height: 200px; /* Ajustar a altura para dispositivos menores */
+    height: 200px;
   }
 
   .cta {
